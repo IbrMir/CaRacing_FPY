@@ -12,6 +12,7 @@ public class Ui_Manager : MonoBehaviour
     public GameObject Exit, back;
 
     public GameObject MainCamera;
+    public GameObject GarageCamera;
 
     private GameObject lastActiveScreen;
 
@@ -30,10 +31,12 @@ public class Ui_Manager : MonoBehaviour
         if (garageScreen.activeSelf || upgradeScreen.activeSelf)
         {
             MainCamera.SetActive(false);
+            GarageCamera.SetActive(true);
         }
         else
         {
             MainCamera.SetActive(true) ;
+            GarageCamera.SetActive(false) ;
         }
 
         if(mainMenuScreen.activeSelf)
